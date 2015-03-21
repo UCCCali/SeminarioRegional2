@@ -1,0 +1,11 @@
+/* TEAM */
+	UI developer, Chef:Juan Guillermo Gómez
+	Contact: juan.gomez01@gmail.com [at] humanstxt.org
+	Twitter: @jggomezt
+	From: Cali, Valle del Cauca, Colombia
+
+/* SITE */
+	Last update:2015/03/14
+	Language: Castellano
+	Doctype:HTML5
+	IDE: Sublime Text, Stylus
