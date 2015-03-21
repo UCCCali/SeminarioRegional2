@@ -7,37 +7,162 @@ naranja=#DD4F24
 colorbody = #e8e8e8
 
 body
-	background colorbody
+	background colorbody	
 	color black
 	font-size 16px
 	font-family arial
 	
 	header
 		background grisOscuro
+		box-shadow 0 5px 0 rgba(0,0,0,0.2)
+		overflow hidden
+		position relative
+		z-index 1	
 		
 		.logo
-
-			img
-				border-right 1px solid azul
+			border-right 1px solid azul			
+			width 62px
+			
+			img		
 				padding 0.5em
 				width 52px
 				
 		.titular
+			margin 0 80px 0 70px
 			
 			.titular-titulo
 				color white
 				font-size 18px
+				margin 0
+				padding 0.5em 0 0 0
 				
-			.titular-filtro
+			.titular-filtro				
 				color azul
 				font-size 14px
+				font-weight bold
+				font-style italic
 				text-decoration none
+			
+			.titular-publicar
+				background naranja
+				border-radius 5px
+				color white
+				font-style italic
+				float right
+				margin 0 0.5em 1em 0
+				padding 0.3em 0.5em				
+				text-decoration none
+				text-shadow 1px 1px black
 				
 		.usuario
+			position absolute
+			top 10px
+			right 0
+			
 			.usuario-avatar
+				margin 0 1.5em 0 0				
+				position relative
+				z-index 2			
+				
 				img
 					width 50px
 					border-radius 50%
+			
+			.usuario-flechita
+				background naranja
+				color white
+				padding 0.1em 0.1em
+				position absolute
+				right 10px			
+				text-decoration none
+				text-align right
+				top 17px
+				width 50%
+				
+	nav
+		background azul
+		border-left 15px solid white
+		position relative
+		
+		&:before
+			border-bottom 20px solid transparent
+			border-left 7px solid white
+			border-top 20px solid transparent
+			content ""
+			left 0
+			position absolute			
+			top 0
+
+		.menu
+			height 40px
+			line-height 40px
+			margin 0
+			overflow-x auto
+			padding 0
+			white-space nowrap
+			
+			&::-webkit-scrollbar
+				display none
+			
+			li
+				display inline-block
+				
+				a
+					color white
+					display inline-block
+					margin 0 0.3em
+					padding 0 0.2em							
+					text-decoration none					
+					
+					&:hover
+						background rgba(black, 0.1)
+	
+	.posts
+		padding 0.5em
+
+		.post
+			background white
+			border-radius 0 0 0.8em 0.8em
+			
+			.post-descripcion
+				border-bottom 3px solid azul
+				
+				.post-detalles
+					
+					.detalle-autor
+						margin 0.5em 0 1em 0
+						
+						a
+							color naranja
+					
+					.detalle-fecha
+						color gristexto
+						float right
+						margin 0 1em 0
+
+					.detalle-tag
+						background azul
+						border-radius 0.5em
+						color white
+						text-decoration none
+						padding 0.2em 0.5em						
+
+					.detalle-titulo
+						color grisOscuro
+						font-size 18px
+						font-style italic
+						margin 0
+						padding 0.2em 0.5em
+
+				.imagen
+					float left
+					margin 0 1em 1em 0					
+
+				img
+					vertical-align top
+					height 160px
+					width 120px
+
 						
 .u-float-right
 	float rigth			
