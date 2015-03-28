@@ -6,6 +6,18 @@ azul = #22BCE0
 naranja=#DD4F24
 colorbody = #e8e8e8
 
+
+@font-face {
+	font-family: "iconos";
+	src: url("../fonts/flaticon.eot");
+	src: url("../fonts/flaticon.eot#iefix") format("embedded-opentype"),
+	url("../fonts/flaticon.woff") format("woff"),
+	url("../fonts/flaticon.ttf") format("truetype"),
+	url("../fonts/flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
 body
 	background colorbody	
 	color black
@@ -54,6 +66,12 @@ body
 				text-decoration none
 				text-shadow 1px 1px black
 				
+				&:after
+					content "\e002"
+					color white
+					font-family "iconos"
+					margin 0 0 0 4px
+				
 		.usuario
 			position absolute
 			top 10px
@@ -67,6 +85,7 @@ body
 				img
 					width 50px
 					border-radius 50%
+					-webkit-animation animationAvatar alternate 3s infinite
 			
 			.usuario-flechita
 				background naranja
@@ -78,6 +97,11 @@ body
 				text-align right
 				top 17px
 				width 50%
+				
+				&:after
+					content "\e001"
+					color white
+					font-family "iconos"
 				
 	nav
 		background azul
@@ -122,13 +146,61 @@ body
 
 		.post
 			background white
+			box-shadow 3px 3px 0 rgba(0,0,0,0.2)
 			border-radius 0 0 0.8em 0.8em
+			margin 0 0 1em 0
 			
-			.post-descripcion
-				border-bottom 3px solid azul
+			.post-acciones
+				border-top 2px solid azul
+				padding 0.5em
+				overflow hidden
+			
+				.acciones-datos
+					float right
+					
+					.datos-comentarios
+						background grisOscuro
+						border-radius 5px
+						color white
+						padding 0.2em 0.5em
+						text-decoration none					
+					
+					.datos-estrellita
+						text-decoration none
+						padding 0 0.3em
+
+						&:before
+							content "\e000"
+							color naranja
+							font-family "iconos"
+
+				.acciones-votos
+					float left
+					
+					.votos-up
+						text-decoration none
+						
+						&:before
+							content "\e003"
+							color green
+							font-family "iconos"
+
+					.votos-down
+						text-decoration none
+						
+						&:before
+							content "\e001"
+							color red
+							font-family "iconos"
+							
+					.votos-total
+						color gristexto
+				
+			.post-descripcion			
 				
 				.post-detalles
-					
+					height 165px					
+
 					.detalle-autor
 						margin 0.5em 0 1em 0
 						
@@ -156,16 +228,67 @@ body
 
 				.imagen
 					float left
-					margin 0 1em 1em 0					
+					margin 0 0.5em 0 0					
 
-				img
-					vertical-align top
-					height 160px
-					width 120px
+					img
+						vertical-align top
+						height 160px
+						width 120px
 
+footer
+	background naranja	
+	color white
+	padding 0.8em 0
+	text-align center	
+	width 100%
+	
+	h3		
+		font-weight normal
+		font-size 14px	
+		
+		strong
+			display block
+			
+		.mejor
+			&:before
+				content '- '
+				
+			&:after
+				content ' -'
+			
 						
 .u-float-right
 	float rigth			
 
 .u-float-left
 	float left
+
+
+@media screen and (min-width: 768px)
+
+	.posts
+		.post
+			display inline-block
+			width 48%
+			vertical-align top
+			
+			&:nth-child(odd)
+				margin-right 0.5em
+	
+@keyframes animationAvatar {
+	0%{
+		-webkit-transform rotate(0deg)
+	}
+	20% {
+	 	-webkit-transform rotate(180deg)
+	}
+	40%{
+		-webkit-transform rotate(0deg)
+	}
+	60%{
+		-webkit-transform rotate(-180deg)
+	}
+	80%{
+		-webkit-transform rotate(0deg)
+	}
+}	
