@@ -9,6 +9,8 @@
 	<link rel="stylesheet" href="../css/vendors/normalize.css" />
 	<link rel="stylesheet" href="../css/articulos.css" />
 	<link type="text/plain" rel="author" href="../humans.txt" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="../js/form.js"></script>
 </head>
 
 <body>
@@ -42,6 +44,32 @@
 			<li><a href="#">Python</a></li>
 		</ul>
 	</nav>	
+
+	<section class="formulario">
+		<form action="">
+			<p>
+				<label for="titulo">Nombre:</label>
+				<input type="text" placeholder="Ingresa titulo" name="titulo" id="titulo" maxlength="20" required>				
+			</p>
+			<p>
+				<label for="autor">Autor:</label>
+				<input type="text" placeholder="Ingresa el Autor" name="autor" id="autor" maxlength="20" required>				
+			</p>
+			<p>
+				<label for="tag">Tag:</label>
+				<input type="text" placeholder="Ingresa Tag" name="tag" id="tag" maxlength="20" required>				
+			</p>
+			<p>
+				<label for="fecha">Fecha:</label>
+				<input type="date" placeholder="Ingresa Fecha" name="fecha" id="fecha">				
+			</p>
+			<p>
+				<label for="email">E-mail:</label>
+				<input type="email" placeholder="Ingresa Email" name="email" id="email">				
+			</p>
+			<input type="submit" value="Agregar">
+		</form>		
+	</section>
 
 	<section class="posts">
 		<article class="post">
@@ -90,7 +118,7 @@
 			<div class="post-acciones">
 				<div class="acciones-votos">
 					<a class="votos-up" href="#"></a>
-					<span class="votos-total">16</span>
+					<span class="votos-total">18</span>
 					<a class="votos-down" href="#"></a>
 				</div>
 				<div class="acciones-datos">
@@ -218,6 +246,9 @@
 				</div>
 			</div>		
 		</article>
+	</section>
+	<section class="mapa">
+		
 	</section>
 
 	<footer>
