@@ -104,7 +104,7 @@ $(function(){
 		var lon = posicion.coords.longitude;
 		var img = new Image();
 
-		img.src = "http://maps.googleapis.com/maps/api/staticmap?zoom=15&size=300x300&markers=color:red&sensor=false&center="+lat+","+lon;
+		img.src = "http://maps.googleapis.com/maps/api/staticmap?zoom=15&size=300x300&markers=color:red&sensor=false&center="+lat+","+lon+"&markers=icon:http://tinyurl.com/2ftvtt6|"+lat+","+lon;
 
 		$('.mapa').append(img);
 
